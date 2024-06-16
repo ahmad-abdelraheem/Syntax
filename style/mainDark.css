@@ -27,7 +27,7 @@ header {
     width: 100vw;
     position: fixed;
     top: 0px;
-    z-index: 10;
+    z-index: 20;
 
 }
 header .brand {
