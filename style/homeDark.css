@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden !important;
+}
 section {
     height: calc(100vh - 70px);
     width: 100vw;
@@ -5,7 +8,7 @@ section {
     justify-content: center;
     align-items: center;
 }
-section img {
+section  > img {
     width: 30vw;
     height: 25vw;
 }
@@ -15,6 +18,67 @@ section .section-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+#why-syntax {
+    height: auto !important;
+}
+#mobile-roadmap {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    section {
+        gap: 30px;
+    }
+    section > img {
+        width: 40vw;
+    }
+    section > .section-content {
+        width: 40vw;
+    }
+}
+@media screen and (max-width: 600px){
+    section {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    section .section-content {
+        width: 80vw;
+        height: 30vh;
+    }
+    section > img {
+        width: 80vw;
+        height: 30vh;
+    }
+    #why-syntax {
+        height: auto;
+    }
+    section .section-content .action {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        display: flex;
+    }
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px !important;
+    }
+    .row {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px !important;
+    }
+    .row .card {
+        width: 90vw !important;
+        height: auto !important;
+        align-items: center;
+    }
+    #web-roadmap {
+        display: none;
+    }
+    #mobile-roadmap {
+        display: flex;   
+    }
 }
 @keyframes vibrate {
     0% { transform: translate(0); }
@@ -32,10 +96,11 @@ section .section-content {
 .vibrate {
     animation: vibrate 1.5s infinite;
 }
-.card-container {
+.cards-container {
     width: 100vw;
     display: flex;
     flex-direction: column;
+    gap: 50px !important;
 }
 .row {
     width: 100vw;
@@ -45,7 +110,7 @@ section .section-content {
 }
 .card {
     width: 30vw !important;
-    height: 25vh !important;
+    height: auto;
     background-color: transparent !important;
     color: white !important;
     border: none !important;

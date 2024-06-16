@@ -43,7 +43,7 @@ header .brand img {
 header ul {
     display: flex;
     gap: 15px;
-    font-size: 30px;
+    font-size: 20px;
     list-style: none;
     letter-spacing: 0pt;
     word-spacing: 0pt !important;
@@ -61,7 +61,7 @@ header ul li a:hover {
 header #menu-btn {
     display: none;
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 700px) {
     header ul {
         display: none;
     }
@@ -79,15 +79,16 @@ header #menu-btn {
     align-items: center;
     padding-top: 40px;
     font-size: 40px;
-    position: absolute;
+    position: fixed;
+    z-index: 11;
     right: 100%;
-    bottom: 0;
+    bottom: 0px;
     transition: right ease-out 0.5s ;
 }
 .hidden-nav.show {
     right: 0 !important;
 }
-@media screen and (min-width: 681px) {
+@media screen and (min-width: 700px) {
     .hidden-nav {
         display: none;
     }    
@@ -104,5 +105,5 @@ header #menu-btn {
     }
 }
 main {
-    margin-top: 70px;
+    margin-top: 100px !important;
 }
