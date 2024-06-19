@@ -14,7 +14,7 @@
     --font-xxl: 35px;
     --font-xl: 30px;
     --font-lg: 25px;
-    --font-m: 20px;
+    --font-md: 20px;
     --font-sm: 16px;
     --font-xs: 14px;
     --font-xxs: 12px;
@@ -47,7 +47,7 @@ section {
 section > .title {
     display: flex;
     flex-direction: column;
-    font-size: 60px;
+    font-size: 60px; 
     text-transform: uppercase;
     word-spacing: 2vw;
 }
@@ -86,7 +86,7 @@ section > .title span:nth-of-type(even) {
     }
 }
 section .content {
-    width: 50vw;
+    width: 80vw;
     margin-top: 5vh;
     font-size: var(--font-lg);
     opacity: 0;
@@ -155,11 +155,15 @@ span.specialaization:nth-child(5) {
     opacity: 0;
 }
 .card:last-child {
-    border: none;
+    border: none !important;
 }
 .card img {
     width: 7vw;
     height: 7vw;
+}
+.card > span {
+    width: 80%;
+    text-align: center;
 }
 
 .visible {
@@ -187,7 +191,7 @@ span.specialaization:nth-child(5) {
     flex-direction: column;
     align-items: flex-end;
     padding-right: 1vw;
-    width: 20vw !important;
+    width: 25vw;
     font-size: var(--font-3xl);
     font-weight: bolder;
     color: var(--second-color);
@@ -199,7 +203,7 @@ span.specialaization:nth-child(5) {
 }
 .scroll-content > .scroll-card {
     padding-left: 1vw;
-    width: 75vw;
+    width:  70vw;
     display: flex;
     flex-direction: column;
     gap: 1.5vh;
@@ -213,16 +217,19 @@ span.specialaization:nth-child(5) {
 }
 .scroll-content > .scroll-card .headline.li::before {
     content: "";
-    background-color: var(--font-color);
+    background-color: var(--main-color);
     display: inline-block;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     
 }
+.scroll-content .scroll-card > p {
+    padding: 10px;
+}
 
 .carousel {
-    width: 75vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,7 +237,7 @@ span.specialaization:nth-child(5) {
     overflow-x: hidden;
 }
 .carousel #message-container {
-    width: 75vw;
+    width: 100%;
     display: flex;
     gap: 1vw;
     transition: transform 0.5s ease-in-out;
@@ -243,7 +250,7 @@ span.specialaization:nth-child(5) {
     align-items: center;
     border: solid 2px var(--red);
     border-radius: 15px;
-    min-width: calc(72vw / 4); /*total width:75, total gap: 1vw * 3 gaps, total displayed cards: 4 */
+    min-width: calc((100% - 3vw) / 3); /*total width:75, total gap: 1vw * 2 gaps, total displayed cards: 3 */
 }
 .carousel #message-container .carousel-card .name {
     font-size: var(--font-lg);
@@ -271,14 +278,14 @@ span.specialaization:nth-child(5) {
 }
 .course {
     background-color:darkred;
-    width: 60vh;
+    width: 60%;
     padding: 10px;
     display: flex;
     align-items: center;
     gap: 1vw;
 }
 .course > .title {
-    width: 20vw;
+    min-width: 25%;
     text-align: center;
     font-size: var(--font-lg);
 }
@@ -330,14 +337,101 @@ span.specialaization:nth-child(5) {
     margin-left: 3vw;
     transition: margin 0.5s;
 }
-@keyframes i-cant-fint-a-name {
-    0% {
-        transform: rotate(0);
+@media screen and (max-width:1024px) {
+    section > .content {
+        width: 80vw;
     }
-    50% {
-        transform: rotate(10);
+    .card img {
+        width: 10vw;
+        height: 10vw;
     }
-    100% {
-        transform: rotate(0);
-    }    
+    .scroll-content > .title {
+        width: 30vw !important;
+    }
+    .carousel #message-container .carousel-card {
+        min-width: calc((100% - 2vw) / 2);
+    }
+    .course {
+        width: 80%;
+    }
+
+}
+@media screen and (max-width:830px) {
+    section > .content {
+        width: 80vw;
+    }
+    .card img {
+        width: 13vw;
+        height: 13vw;
+    }
+    .scroll-content > .title {
+        flex-direction: row;
+        gap: 1vh;
+        transform: rotate(90deg);
+        border: none;
+        height: 10vh;
+        width: 10vw !important;
+        max-height: 10vw;
+        align-items: flex-start;
+        padding-top: 0;
+        padding-left: 5vh;
+        text-wrap: nowrap;
+        gap: 2vh;
+    }
+    .scroll-content:first-child > .title {
+        padding-left: 0vh;
+    }
+    .scroll-content > .scroll-card {
+        width: 89vw  !important;
+        border-left: solid 1px gray ;
+    }
+    .carousel #message-container .carousel-card {
+        min-width: calc((100% - 1vw) / 2);
+    }
+    .course {
+        width: 80%;
+    }
+
+}
+@media screen and (max-width:600px) {
+    section > .title {
+        font-size: var(--font-3xl);
+    }
+    section > .content {
+        font-size: var(--font-md);
+    }
+    .cards-container > .card > span {
+        font-size: var(--font-md);
+    }
+    .headline {
+        font-size: var(--font-lg) !important;
+    }
+    .scroll-card > .description {
+        font-size: var(--font-sm);
+    }
+}
+@media screen and (max-width:450px) {
+    section.cards-container {
+        flex-direction: column;
+        height: auto;
+    }
+    section.cards-container > .card {
+        border-right: none;
+        border-bottom: solid 1px;
+        width: 80vw;
+    }
+    section.cards-container > .card > img {
+        width: 20vw;
+        height: 20vw;
+    }
+    .last-section .content *:first-child {
+        font-size: var(--font-3xl);
+    }
+    .last-section .content *:last-child {
+        font-size: var(--font-lg) !important;
+    }
+    .last-section .content *:last-child:hover {
+        margin-left: 3vw;
+        transition: margin 0.5s;
+    }
 }

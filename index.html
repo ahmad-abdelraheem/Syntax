@@ -23,6 +23,7 @@
             <li class="nav-link">FAQs</li>
             <li class="nav-link button button-outline-red">enroll now</li>
         </ul>
+        <button class="menu-toggle button rounded-button"><i class="bi bi-list"></i></button>
     </header>
     <main>
         <section>
@@ -61,7 +62,7 @@
                 </div>
                 <div class="scroll-card" style="padding-top: 0;">
                     <span class="li headline">Why You Shoul Learn Programming?</span>
-                    <p>With the potential for a six-figure salary, unlimited PTO, and the flexibility to work from anywhere, learning programming is a smart choice. Programming is increasingly integral to all industries, making it a valuable skill to have.</p>
+                    <p class="description">With the potential for a six-figure salary, unlimited PTO, and the flexibility to work from anywhere, learning programming is a smart choice. Programming is increasingly integral to all industries, making it a valuable skill to have.</p>
                     <span class="li headline">Who We Are?</span>
                     <p>Syntax Jo is a team from Al-Hussein Bin Talal University dedicated to developing talented and professional developers in Jordan. Every year, Syntax Jo offers a variety of courses in fields such as web development, Android development, UX/UI, and more.</p>
                     <span class="li headline">How I Will Learn?</span>
@@ -206,9 +207,6 @@
             elements.forEach(element => {
                 if (isInViewport(element)) {
                     element.classList.add('visible');
-                    console.log('Added visible class:', element); // Debug log
-                } else {
-                    console.log('Element not in viewport:', element); // Debug log
                 }
             });
         }
