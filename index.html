@@ -3,105 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syntax Bootcamp</title>
-    <link rel="icon" href="./img/syntaxIcon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style/mainDark.css" id="main-style">
-    <link rel="stylesheet" href="style/generalStyle.css">
-    <link rel="stylesheet" href="./style/homeDark.css" id="page-style">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Syntax</title>
+    <link rel="shortcut icon" href="./img/syntaxIcon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style/home.css">
+    <link rel="stylesheet" href="./style/main.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <header>
+    <header id="lg-nav">
         <div class="brand">
-            <img src="./img/syntaxIcon.ico" alt="">
-            <h1>Syntax Jo</h1>
+            <img src="./img/syntaxIcon.ico" alt="" id="brand-logo">
+            <span>Syntax jo</span>
         </div>
-        <ul>
-            <li><a href="./index.html" class="nav-link active">Home</a></li>
-            <li><a href="./bootcamp.html" class="nav-link">Bootcamp</a></li>
-            <li><a href="./about.html" class="nav-link">About</a></li>
-            <li><a href="./contact.html" class="nav-link">Contact Us</a></li>
+        <ul class="tabs">
+            <li class="nav-link active">Home</li>
+            <li class="nav-link">Courses</li>
+            <li class="nav-link">About</li>
+            <li class="nav-link">FAQs</li>
+            <li class="nav-link button button-outline-red">enroll now</li>
         </ul>
-        <button id="menu-btn" class="button button-lg button-trans"><i class="bi bi-list"></i></button>
     </header>
-    <div class="hidden-nav" id="hidden-nav">
-        <a href="./index.html" class="nav-link active">Home</a>
-        <a href="./bootcamp.html" class="nav-link">Bootcamp</a>
-        <a href="./about.html" class="nav-link">About</a>
-        <a href="./contact.html" class="nav-link">Contact Us</a>
-    </div>
-
     <main>
         <section>
-            <div class="section-content">
-                <h1>The Next Generation of Learning</h1>
-                <p>Discover a new way to learn at Syntax Bootcamp. Our modern methods and personalized lessons will give you the skills you need to start a career in software development.</p>
+            <div class="title">
+                <span>Become a</span>
+                <span>Profisional</span>
+                <span><span class="red">&lt;</span>Developer<span class="red">/&gt;</span></span>
             </div>
-            <img src="./img/hero_background.png" class="vibrate">
-        </section>
-        <section style="flex-direction: column; gap:20px;" id="why-syntax">
-            <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Why Syntax bootcamp?</h1>
-            <div class="cards-container">
-                <div class="row">
-                    <div class="card">
-                        <div class="title">
-                            <i class="bi bi-display"></i>
-                            <h3>Project Based Learning</h3>
-                        </div>
-                        <span>you will learn by practicing on reeal-world project</span>
-                    </div>
-                    <div class="card">
-                        <div class="title">
-                            <i class="material-symbols-outlined">local_library</i>
-                            <h3>Learn How To Learn</h3>
-                        </div>
-                        <span>In our journey, you will obtain the skill of learning and know how to get the information.</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card">
-                        <div class="title">
-                            <i class="bi bi-briefcase"></i>
-                            <h3>On-Site Practicing Lab</h3>
-                        </div>
-                        <span>You will attend on a practice lab which will simulate the working environment.</span>
-                    </div>
-                    <div class="card">
-                        <div class="title">
-                            <i class="material-symbols-outlined">quick_reference_all</i>
-                            <h3>Live Feedback</h3>
-                        </div>
-                        <span>You will get a live feedback of your development, and will have the advice when you need it.</span>
-                    </div>
-                </div>
+            <div class="content">
+                <p> With syntax bootcamp, you will learn and gain the skills to become a profisional developer. 
+                    enroll now in one of our courses in various field like <span class="specialaization">Computer Science</span> ,
+                    <span class="specialaization">Front-End Web Development</span> and
+                    <span class="specialaization">Back-End Web Development</span>.
+                </p>
             </div>
         </section>
-        <section id="web-roadmap">
-            <img src="./img/roadmap.png" style="width: 100%; height:90%">
+        <section class="cards-container">
+            <div class="card fade-in">
+                <img src="./img/fig1.png" alt="">
+                <span>Live Small-Group Coaching</span>
+            </div>
+            <div class="card fade-in">
+                <img src="./img/fig2.png" alt="">
+                <span>Virtual Meeting That Fit Your Schedule</span>
+            </div>
+            <div class="card fade-in">
+                <img src="./img/fig3.png" alt="">
+                <span>Completly Free along the Journey</span>
+            </div>
         </section>
-        <section id="mobile-roadmap">
-            <img src="./img/mobileRoadmap.png" style="width: 100%;">
-        </section>
-        <section>
-            <div class="section-content">
-                <h1>Code Your Future!</h1>
-                <p>Join Syntax Bootcamp to master coding skills and launch your tech career. Our expert-led courses cover everything from basics to advanced full-stack development. Start coding your future today!</p>
-                <div class="action">
-                    <button class="btn btn-danger">Register Now!</button>
+        <section id="x">
+            <div class="scroll-content  fade-in">
+                <div class="title" style="padding-top: 0;">
+                    <span>01</span>
+                    <span>About</span>
+                </div>
+                <div class="scroll-card" style="padding-top: 0;">
+                    <span class="li headline">Why You Shoul Learn Programming?</span>
+                    <p>With the potential for a six-figure salary, unlimited PTO, and the flexibility to work from anywhere, learning programming is a smart choice. Programming is increasingly integral to all industries, making it a valuable skill to have.</p>
+                    <span class="li headline">Who We Are?</span>
+                    <p>Syntax Jo is a team from Al-Hussein Bin Talal University dedicated to developing talented and professional developers in Jordan. Every year, Syntax Jo offers a variety of courses in fields such as web development, Android development, UX/UI, and more.</p>
+                    <span class="li headline">How I Will Learn?</span>
+                    <p>At Syntax Bootcamp, you'll start by attending online courses to gain foundational knowledge. You'll then participate in small groups to practice and work on real-world projects throughout your learning journey. 
+                        <br/><br/>   
+                        For students at Al-Hussein Bin Talal University, you'll have the opportunity to attend on-site practice labs on campus. Students from other universities can participate in online simulations of these labs.
+                    </p>
                 </div>
             </div>
-            <img src="./img/fig1.png" alt="">
+            <div class="scroll-content fade-in">
+                <div class="title">
+                    <span>02</span>
+                    <span>Testimonials</span>
+                </div>
+                <div class="scroll-card">
+                    <span class="headline">
+                        What Our Students Say
+                    </span>
+                    <div class="carousel">
+                        <div id="message-container">
+                            <div class="carousel-card">
+                                <span class="name">Anonymous</span>
+                                <p class="message">I didn't attend all the courses or from the very beginning, but every day I did attend, I really benefited a lot. I learned how to solve problems quickly and gained confidence in my solutions. It was also a lot of fun, and the solutions didn't always have to be complicated. I just want to thank everyone on the team, your interactions were amazing.</p>
+                            </div>
+                            <div class="carousel-card">
+                                <span class="name">Anonymous</span>
+                                <p class="message">A super creative and effective idea that really pushes you to work on yourself and gets you excited to have extra motivation to keep going and excel in your field of study. Kudos to everyone involved, may it all count as good deeds for you guys. Wishing everyone success and happiness, and may you always stay strong and be blessed. Thanks a ton 🤍🫶</p>
+                            </div>
+                            <div class="carousel-card">
+                                <span class="name">Osamah Al-Qudah</span>
+                                <p class="message">Thanks to the bootcamp, I transitioned from a complete beginner to a proficient developer in just a few months. The mentors were always available to guide me through challenges.</p>
+                            </div>
+                            <div class="carousel-card">
+                                <span class="name">Saleem Al-Azaydeh</span>
+                                <p class="message">The flexible learning schedule allowed me to balance my studies with my job. The bootcamp provided me with the latest industry knowledge and techniques, making me a competitive candidate in the job market.</p>
+                            </div>
+                            <div class="carousel-card">
+                                <span class="name">Abdulrahman Al-Mohtasib</span>
+                                <p class="message">I loved the small group sessions where we could collaborate and learn from each other. The bootcamp's focus on practical skills and project-based learning was exactly what I needed.</p>
+                            </div>
+                            <div class="carousel-card">
+                                <span class="name">Shahid Al-Kharabsheh</span>
+                                <p class="message">This bootcamp exceeded my expectations. The combination of online courses and real-world projects was perfect. I felt fully supported by the instructors and staff throughout my learning journey.</p>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button class="rounded-button" id="prev-button"><i class="bi bi-caret-left-fill"></i></button>
+                            <button class="rounded-button" id="next-button"><i class="bi bi-caret-right-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-content fade-in">
+                <div class="title">
+                    <span>03</span>
+                    <span>Bootcamp Roadmap</span>
+                </div>
+                <div class="scroll-card roadmap">
+                    <div class="course fadi-in">
+                        <span class="title">HTML</span>
+                        <p class="description">
+                            Learn to create the structure and content of web pages using HTML, including elements for text, images, links, and more.
+                        </p>
+                    </div>
+                    <div class="course-devider"></div>
+                    <div class="course fadi-in">
+                        <span class="title">CSS</span>
+                        <p class="description">Gain skills in styling and designing web pages using CSS, covering layout, typography, colors, and responsive design principles.</p>
+                    </div>
+                    <div class="course-devider"></div>
+                    <div class="course fadi-in">
+                        <span class="title">Bootstrap</span>
+                        <p class="description">Master the use of Bootstrap to rapidly prototype and build responsive, mobile-first websites with pre-built components and utilities.</p>
+                    </div>
+                    <div class="course-devider"></div>
+                    <div class="course fadi-in">
+                        <span class="title">Versions Control System (Git)</span>
+                        <p class="description">Learn how to effectively use Git to track changes in code, collaborate with teams, and manage project versions efficiently.</p>
+                    </div>
+                    <div class="course-devider"></div>
+                    <div class="course fadi-in">
+                        <span class="title">JavaScript</span>
+                        <p class="description">Acquire proficiency in JavaScript to create interactive web pages, handle events, manipulate the DOM, and work with APIs for dynamic content.</p>
+                    </div>
+                    <div class="course-devider"></div>
+                    <div class="course fadi-in">
+                        <span class="title">APIs</span>
+                        <p class="description">Understand how to integrate and work with APIs to fetch data, perform CRUD operations, and enhance web applications with external functionalities.</p>
+                    </div>
+                    <div class="course-devider"></div>
+                    <div class="course fadi-in">
+                        <span class="title">Vue.js</span>
+                        <p class="description">Develop skills in Vue.js to build interactive and scalable front-end applications using components, directives, state management, and routing.</p>
+                    </div>
+                    <div class="course-devider"></div>
+                    <div class="course fadi-in">
+                        <span class="title">MySQL</span>
+                        <p class="description">Master MySQL for managing relational databases, learning SQL queries, database design, and interacting with databases from web applications.</p>
+                    </div>
+                    <div class="course-devider"></div>
+                    <div class="course fadi-in">
+                        <span class="title">PHP</span>
+                        <p class="description">Learn PHP for server-side scripting to create dynamic web pages, handle forms, sessions, authentication, and interact with databases like MySQL.</p>
+                    </div>
+                    <div class="course-devider"></div>
+                    <div class="course fadi-in">
+                        <span class="title">Laravel</span>
+                        <p class="description">Gain expertise in Laravel to develop robust web applications following MVC architecture, including routing, middleware, Eloquent ORM, and authentication.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-
+        <section class="last-section">
+            <video autoplay muted loop id="background-video">
+                <source src="../Video/starsBackground.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="content">
+                <span class="fade-in">Are You Ready?</span>
+                <span class="fade-in" style="animation-delay: 0.5s;">Start Learning Now</span>
+                <button class="button button-outline-red fade-in" style="animation-delay: 1s;">Enroll Now</button>
+            </div>
+        </section>
     </main>
-    <footer>
+
+
+
+
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom > 0 &&
+                rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+                rect.right > 0
+            );
+        }
         
-    </footer>
-    
-    
-    <script src="./js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        function checkElementsInViewport() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                if (isInViewport(element)) {
+                    element.classList.add('visible');
+                    console.log('Added visible class:', element); // Debug log
+                } else {
+                    console.log('Element not in viewport:', element); // Debug log
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkElementsInViewport);
+        window.addEventListener('resize', checkElementsInViewport);
+        document.addEventListener('DOMContentLoaded', checkElementsInViewport); // Initial check when the DOM is fully loaded 
+        //////////////////////////////////////////////////////////////
+
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const feedbackCarousel = document.getElementById('message-container');
+            const prevBtn = document.getElementById('prev-button');
+            const nextBtn = document.getElementById('next-button');
+        
+            let cardWidth = 0; // Initialize card width
+            let numVisibleCards = 0; // Initialize number of visible cards
+            let scrollAmount = 0; // Initialize scroll amount
+            let autoScrollInterval; // Variable to hold the interval for auto scrolling
+            const autoScrollDelay = 5000; // Auto scroll delay in milliseconds (5 seconds)
+        
+            function calculateVisibleCards() {
+                // Get the first carousel card to calculate its width
+                const firstCard = feedbackCarousel.querySelector('.carousel-card');
+                if (firstCard) {
+                    const cardStyle = window.getComputedStyle(firstCard); // Get computed styles
+                    cardWidth = firstCard.offsetWidth + 
+                                parseFloat(cardStyle.marginLeft) + 
+                                parseFloat(cardStyle.marginRight) +
+                                parseFloat(getComputedStyle(feedbackCarousel).gap); // include gap
+        
+                    // Calculate number of visible cards
+                    numVisibleCards = Math.floor(feedbackCarousel.clientWidth / cardWidth);
+                }
+            }
+        
+            function startAutoScroll() {
+                stopAutoScroll(); // Stop any existing auto scroll interval
+                autoScrollInterval = setInterval(() => {
+                    // Increase scroll amount by card width times number of cards to move
+                    scrollAmount += cardWidth;
+                    // Check if scroll amount exceeds maxScroll, then scroll to the first card
+                    if (scrollAmount > feedbackCarousel.scrollWidth - feedbackCarousel.clientWidth) {
+                        scrollAmount = 0;
+                    }
+                    // Apply transform to slide cards to the right
+                    feedbackCarousel.style.transform = `translateX(-${scrollAmount}px)`;
+                }, autoScrollDelay);
+            }
+        
+            function stopAutoScroll() {
+                clearInterval(autoScrollInterval);
+            }
+        
+            // Event listeners for navigation buttons
+            prevBtn.addEventListener('click', () => {
+                stopAutoScroll(); // Stop auto scrolling when manually navigating
+                // Decrease scroll amount by card width times number of cards to move
+                scrollAmount -= cardWidth;
+                // Adjust scroll amount to ensure circular scrolling
+                if (scrollAmount < 0) {
+                    scrollAmount = feedbackCarousel.scrollWidth - feedbackCarousel.clientWidth;
+                }
+                // Apply transform to slide cards to the left
+                feedbackCarousel.style.transform = `translateX(-${scrollAmount}px)`;
+            });
+        
+            nextBtn.addEventListener('click', () => {
+                stopAutoScroll(); // Stop auto scrolling when manually navigating
+                // Increase scroll amount by card width times number of cards to move
+                scrollAmount += cardWidth;
+                // Check if scroll amount exceeds maxScroll, then scroll to the first card
+                if (scrollAmount > feedbackCarousel.scrollWidth - feedbackCarousel.clientWidth) {
+                    scrollAmount = 0;
+                }
+                // Apply transform to slide cards to the right
+                feedbackCarousel.style.transform = `translateX(-${scrollAmount}px)`;
+            });
+        
+            // Initial calculation on page load
+            calculateVisibleCards();
+        
+            // Calculate the maximum scrollable width
+            const maxScroll = feedbackCarousel.scrollWidth - feedbackCarousel.clientWidth;
+        
+            // Start auto scrolling on page load
+            startAutoScroll();
+        
+            // Recalculate visible cards on window resize
+            window.addEventListener('resize', calculateVisibleCards);
+        
+            // Stop auto scrolling when hovering over carousel
+            feedbackCarousel.addEventListener('mouseenter', stopAutoScroll);
+            feedbackCarousel.addEventListener('mouseleave', startAutoScroll);
+        });
+        
+        
+        const colors = ['darkgoldenrod', 'midnightblue','darkmagenta', 'darkslategray', 'gray','darkslateblue', 'darkcyan']
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const courses = document.getElementsByClassName('course')
+            const length = courses.length
+            for (let i = 0 ; i < length ; i ++){
+                courses[i].style.backgroundColor = colors[i%colors.length]
+            }
+            console.log(courses)
+        })
+    </script>
 </body>
 </html>
