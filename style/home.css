@@ -409,6 +409,15 @@ span.specialaization:nth-child(5) {
     .scroll-card > .description {
         font-size: var(--font-sm);
     }
+    .course {
+        width: 90%;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:525px) {
+    .carousel #message-container .carousel-card {
+        min-width: 100%;
+    }
 }
 @media screen and (max-width:450px) {
     section.cards-container {
@@ -433,5 +442,16 @@ span.specialaization:nth-child(5) {
     .last-section .content *:last-child:hover {
         margin-left: 3vw;
         transition: margin 0.5s;
+    }
+    .scroll-content > .title {
+        height: 12vw;
+        width: 15vw !important;
+        max-height: 12vw;
+    }
+    .scroll-content > .scroll-card {
+        width: 84vw  !important;
+    }
+    .course > .title {
+        font-size: var(--font-lg);
     }
 }
