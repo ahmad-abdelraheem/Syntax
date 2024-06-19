@@ -437,7 +437,7 @@ span.specialaization:nth-child(5) {
         font-size: var(--font-3xl);
     }
     .last-section .content *:last-child {
-        font-size: var(--font-lg) !important;
+        font-size: var(--font-sm) !important;
     }
     .last-section .content *:last-child:hover {
         margin-left: 3vw;
