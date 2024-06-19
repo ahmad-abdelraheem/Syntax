@@ -436,6 +436,9 @@ span.specialaization:nth-child(5) {
     .last-section .content *:first-child {
         font-size: var(--font-3xl);
     }
+    .last-section .content *:nth-child(2) {
+        font-size: var(--font-lg);
+    }
     .last-section .content *:last-child {
         font-size: var(--font-sm) !important;
     }

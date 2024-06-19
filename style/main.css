@@ -73,6 +73,37 @@ header button.menu-toggle {
     font-size: var(--font-xxl);
     display: none;
 }
+ul.dropdown-navbar {
+    background-color: var(--white-space);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    list-style: none;
+    font-size: var(--font-lg);
+    gap: 1vh;
+    transition: width 0.7s cubic-bezier(1, -0.66, 0.09, 1.66);
+}
+ul.dropdown-navbar li.active {
+    color: var(--main-color);
+    border-bottom: solid 2px var(--main-color);
+}
+/* .dropdown-navbar ul li.active::before {
+    content: "";
+    background-color: var(--red);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+} */
 .button {
     background-color: transparent;
     border: solid 1px white;

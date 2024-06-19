@@ -23,8 +23,14 @@
             <li class="nav-link">FAQs</li>
             <li class="nav-link button button-outline-red">enroll now</li>
         </ul>
-        <button class="menu-toggle button rounded-button"><i class="bi bi-list"></i></button>
+        <button class="menu-toggle button rounded-button" id="menu-toggle"><i class="bi bi-list"></i></button>
     </header>
+        <ul class="tabs dropdown-navbar" id="dropdown-navbar">
+            <li class="nav-link active">Home</li>
+            <li class="nav-link">Courses</li>
+            <li class="nav-link">About</li>
+            <li class="nav-link">FAQs</li>
+        </ul>
     <main>
         <section>
             <div class="title">
@@ -313,6 +319,18 @@
                 courses[i].style.backgroundColor = colors[i%colors.length]
             }
             console.log(courses)
+        })
+
+        const menuToggleBTN = document.getElementById('menu-toggle')
+        const dropdownNavbar = document.getElementById('dropdown-navbar')
+
+        menuToggleBTN.addEventListener('click', ()=> {
+            if (dropdownNavbar.style.width == '0vw'){
+                dropdownNavbar.style.width = '100vw';
+
+            } else {
+                dropdownNavbar.style.width = '0vw';
+            }
         })
     </script>
 </body>
