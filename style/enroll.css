@@ -1,0 +1,111 @@
+:root {
+    --main-color : #b40000;
+    --second-color: #dec6c6;
+    --white-space: #24292e !important;
+    --font-color: #fff;
+
+    --red:#b40000;
+    --green: #2ad200;
+    --blue: #007ac6;
+    --yellow: #ccd300;
+    --white: #fff;
+
+    --font-3xl: 40px;
+    --font-xxl: 35px;
+    --font-xl: 30px;
+    --font-lg: 25px;
+    --font-md: 20px;
+    --font-sm: 16px;
+    --font-xs: 14px;
+    --font-xxs: 12px;
+    --font-3xs: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+body {
+    overflow-x: hidden;
+    background-color: var(--white-space);
+    color: var(--font-color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+}
+main {
+    margin-top: 10vh;
+    width: 100vw;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    height: 89vh;
+    padding: 0px 2vw;
+    
+}
+section h1 {
+    font-size: var(--font-3xl);
+}
+section h2 {
+    font-size: var(--font-xl);
+}
+section ul li {
+    font-size: var(--font-md);
+}
+.cover {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    gap: 0;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+.cover > img {
+    width: 50vw;
+    min-width: 50vw;
+    height: 100vh;
+    transition: transform 2s cubic-bezier(0.92, 0, 0.2, 1.51), filter 0.5s;
+    transform: none;
+}
+@media screen and (max-width: 800px){
+    section {
+        width: 70vw;
+        padding: 0px 4vw;
+    }
+}
+@media screen and (max-width: 600px){
+    section {
+        width: 80vw;
+    }
+    section h1 {
+        font-size: var(--font-xxl);
+    }
+    section ul li {
+        font-size: var(--font-lg);
+    }
+}
+@media screen and (max-width: 450px){
+    section {
+        width: 90vw;
+    }
+    section h1 {
+        font-size: var(--font-xl);
+    }
+    section ul li {
+        font-size: var(--font-sm);
+    }
+}

@@ -17,19 +17,16 @@
             <span>Syntax jo</span>
         </div>
         <ul class="tabs">
-            <li class="nav-link active">Home</li>
-            <li class="nav-link">Courses</li>
-            <li class="nav-link">About</li>
-            <li class="nav-link">FAQs</li>
-            <li class="nav-link button button-outline-red">enroll now</li>
+            <li class="nav-link"><a href="./index.html">Home</a></li>
+            <li class="nav-link"><a href="./contact.html">Contact Us</a></li>
+            <li class="nav-link"><a href="./enroll.html" class="button button-outline-red">enroll now</a></li>
         </ul>
         <button class="menu-toggle button rounded-button" id="menu-toggle"><i class="bi bi-list"></i></button>
     </header>
         <ul class="tabs dropdown-navbar" id="dropdown-navbar">
-            <li class="nav-link active">Home</li>
-            <li class="nav-link">Courses</li>
-            <li class="nav-link">About</li>
-            <li class="nav-link">FAQs</li>
+            <li class="nav-link"><a href="./index.html">Home</a></li>
+            <li class="nav-link"><a href="./contact.html">Contact Us</a></li>
+            <li class="nav-link"><a href="./enroll.html" class="button button-outline-red">enroll now</a></li>
         </ul>
     <main>
         <section>
@@ -160,8 +157,8 @@
                     </div>
                     <div class="course-devider"></div>
                     <div class="course fadi-in">
-                        <span class="title">Vue.js</span>
-                        <p class="description">Develop skills in Vue.js to build interactive and scalable front-end applications using components, directives, state management, and routing.</p>
+                        <span class="title">Blazor</span>
+                        <p class="description">Dive into Blazor to build interactive web applications using C# instead of JavaScript. Learn about components, data binding, event handling, and how to create modern single-page applications (SPAs).</p>
                     </div>
                     <div class="course-devider"></div>
                     <div class="course fadi-in">
@@ -170,13 +167,13 @@
                     </div>
                     <div class="course-devider"></div>
                     <div class="course fadi-in">
-                        <span class="title">PHP</span>
-                        <p class="description">Learn PHP for server-side scripting to create dynamic web pages, handle forms, sessions, authentication, and interact with databases like MySQL.</p>
+                        <span class="title">C#</span>
+                        <p class="description">Develop a strong foundation in C#, a versatile and powerful programming language. Explore object-oriented programming, data types, control structures, and advanced features like LINQ, async/await, and more.</p>
                     </div>
                     <div class="course-devider"></div>
-                    <div class="course fadi-in">
-                        <span class="title">Laravel</span>
-                        <p class="description">Gain expertise in Laravel to develop robust web applications following MVC architecture, including routing, middleware, Eloquent ORM, and authentication.</p>
+                    <div class="course fadi-in"> 
+                        <span class="title">ASP.NET MVC</span>
+                        <p class="description">Gain expertise in ASP.NET MVC, a framework for building robust web applications. Understand the Model-View-Controller pattern, routing, data validation, and how to develop scalable, maintainable, and testable applications.</p>
                     </div>
                 </div>
             </div>
@@ -184,12 +181,11 @@
         <section class="last-section">
             <video autoplay muted loop id="background-video">
                 <source src="../Video/starsBackground.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
             <div class="content">
                 <span class="fade-in">Are You Ready?</span>
                 <span class="fade-in" style="animation-delay: 0.5s;">Start Learning Now</span>
-                <button class="button button-outline-red fade-in" style="animation-delay: 1s;">Enroll Now</button>
+                <a href="./enroll.html" class="button button-outline-red fade-in" style="animation-delay: 1s;">Enroll Now</a>
             </div>
         </section>
     </main>
@@ -197,141 +193,6 @@
 
 
 
-    <script>
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.bottom > 0 &&
-                rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
-                rect.right > 0
-            );
-        }
-        
-        function checkElementsInViewport() {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach(element => {
-                if (isInViewport(element)) {
-                    element.classList.add('visible');
-                }
-            });
-        }
-        
-        window.addEventListener('scroll', checkElementsInViewport);
-        window.addEventListener('resize', checkElementsInViewport);
-        document.addEventListener('DOMContentLoaded', checkElementsInViewport); // Initial check when the DOM is fully loaded 
-        //////////////////////////////////////////////////////////////
-
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            const feedbackCarousel = document.getElementById('message-container');
-            const prevBtn = document.getElementById('prev-button');
-            const nextBtn = document.getElementById('next-button');
-        
-            let cardWidth = 0; // Initialize card width
-            let numVisibleCards = 0; // Initialize number of visible cards
-            let scrollAmount = 0; // Initialize scroll amount
-            let autoScrollInterval; // Variable to hold the interval for auto scrolling
-            const autoScrollDelay = 5000; // Auto scroll delay in milliseconds (5 seconds)
-        
-            function calculateVisibleCards() {
-                // Get the first carousel card to calculate its width
-                const firstCard = feedbackCarousel.querySelector('.carousel-card');
-                if (firstCard) {
-                    const cardStyle = window.getComputedStyle(firstCard); // Get computed styles
-                    cardWidth = firstCard.offsetWidth + 
-                                parseFloat(cardStyle.marginLeft) + 
-                                parseFloat(cardStyle.marginRight) +
-                                parseFloat(getComputedStyle(feedbackCarousel).gap); // include gap
-        
-                    // Calculate number of visible cards
-                    numVisibleCards = Math.floor(feedbackCarousel.clientWidth / cardWidth);
-                }
-            }
-        
-            function startAutoScroll() {
-                stopAutoScroll(); // Stop any existing auto scroll interval
-                autoScrollInterval = setInterval(() => {
-                    // Increase scroll amount by card width times number of cards to move
-                    scrollAmount += cardWidth;
-                    // Check if scroll amount exceeds maxScroll, then scroll to the first card
-                    if (scrollAmount > feedbackCarousel.scrollWidth - feedbackCarousel.clientWidth) {
-                        scrollAmount = 0;
-                    }
-                    // Apply transform to slide cards to the right
-                    feedbackCarousel.style.transform = `translateX(-${scrollAmount}px)`;
-                }, autoScrollDelay);
-            }
-        
-            function stopAutoScroll() {
-                clearInterval(autoScrollInterval);
-            }
-        
-            // Event listeners for navigation buttons
-            prevBtn.addEventListener('click', () => {
-                stopAutoScroll(); // Stop auto scrolling when manually navigating
-                // Decrease scroll amount by card width times number of cards to move
-                scrollAmount -= cardWidth;
-                // Adjust scroll amount to ensure circular scrolling
-                if (scrollAmount < 0) {
-                    scrollAmount = feedbackCarousel.scrollWidth - feedbackCarousel.clientWidth;
-                }
-                // Apply transform to slide cards to the left
-                feedbackCarousel.style.transform = `translateX(-${scrollAmount}px)`;
-            });
-        
-            nextBtn.addEventListener('click', () => {
-                stopAutoScroll(); // Stop auto scrolling when manually navigating
-                // Increase scroll amount by card width times number of cards to move
-                scrollAmount += cardWidth;
-                // Check if scroll amount exceeds maxScroll, then scroll to the first card
-                if (scrollAmount > feedbackCarousel.scrollWidth - feedbackCarousel.clientWidth) {
-                    scrollAmount = 0;
-                }
-                // Apply transform to slide cards to the right
-                feedbackCarousel.style.transform = `translateX(-${scrollAmount}px)`;
-            });
-        
-            // Initial calculation on page load
-            calculateVisibleCards();
-        
-            // Calculate the maximum scrollable width
-            const maxScroll = feedbackCarousel.scrollWidth - feedbackCarousel.clientWidth;
-        
-            // Start auto scrolling on page load
-            startAutoScroll();
-        
-            // Recalculate visible cards on window resize
-            window.addEventListener('resize', calculateVisibleCards);
-        
-            // Stop auto scrolling when hovering over carousel
-            feedbackCarousel.addEventListener('mouseenter', stopAutoScroll);
-            feedbackCarousel.addEventListener('mouseleave', startAutoScroll);
-        });
-        
-        
-        const colors = ['darkgoldenrod', 'midnightblue','darkmagenta', 'darkslategray', 'gray','darkslateblue', 'darkcyan']
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const courses = document.getElementsByClassName('course')
-            const length = courses.length
-            for (let i = 0 ; i < length ; i ++){
-                courses[i].style.backgroundColor = colors[i%colors.length]
-            }
-            console.log(courses)
-        })
-
-        const menuToggleBTN = document.getElementById('menu-toggle')
-        const dropdownNavbar = document.getElementById('dropdown-navbar')
-
-        menuToggleBTN.addEventListener('click', ()=> {
-            if (dropdownNavbar.style.width == '0vw'){
-                dropdownNavbar.style.width = '100vw';
-
-            } else {
-                dropdownNavbar.style.width = '0vw';
-            }
-        })
-    </script>
+    <script src="./index.js"></script>
 </body>
 </html>
