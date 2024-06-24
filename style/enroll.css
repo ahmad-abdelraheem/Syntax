@@ -1,7 +1,7 @@
 :root {
     --main-color : #b40000;
     --second-color: #dec6c6;
-    --white-space: #24292e !important;
+    --white-space: #000;
     --font-color: #fff;
 
     --red:#b40000;
@@ -33,7 +33,7 @@ body {
     overflow-x: hidden;
     background-color: var(--white-space);
     color: var(--font-color);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     overflow: hidden;
 }
 main {
@@ -62,8 +62,13 @@ section h1 {
 section h2 {
     font-size: var(--font-xl);
 }
-section ul li {
+section ol li {
     font-size: var(--font-md);
+}
+.important {
+    text-decoration: underline;
+    color: #9b592c;
+    font-size: larger;
 }
 .cover {
     width: 100vw;
