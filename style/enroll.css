@@ -111,6 +111,6 @@ section ol li {
         font-size: var(--font-xl);
     }
     section ul li {
-        font-size: var(--font-sm);
+        font-size: var(--font-xxs);
     }
 }
