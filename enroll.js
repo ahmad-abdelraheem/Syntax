@@ -1,26 +1,17 @@
 const rightCover = document.getElementById('right-cover')
+const cover = document.getElementById('cover')
 const leftCover = document.getElementById('left-cover')
 const screenWidth = window.innerWidth;
 
-document.addEventListener('DOMContentLoaded', ()=> {
-    setTimeout(()=> {
+document.addEventListener('DOMContentLoaded', async ()=> {
+    await setTimeout(()=> {
         rightCover.style.filter = 'blur(1px)'
         leftCover.style.filter = 'blur(1px)'
-        if (screenWidth < 450) {
-            rightCover.style.transform = 'translateX(45vw)'
-            leftCover.style.transform = 'translateX(-45vw)'
-        } else if (screenWidth < 600) {
-            rightCover.style.transform = 'translateX(40vw)'
-            leftCover.style.transform = 'translateX(-40vw)'
-        } else if (screenWidth < 800) {
-            rightCover.style.transform = 'translateX(35vw)'
-            leftCover.style.transform = 'translateX(-35vw)'
-        } else {
-            rightCover.style.transform = 'translateX(30vw)'
-            leftCover.style.transform = 'translateX(-30vw)'
-        }
+        rightCover.style.transform = 'translateX(100vw)'
+        leftCover.style.transform = 'translateX(-100vw)'
         setTimeout(()=> {
             document.getElementById('cover').style.zIndex = '-1'
+            cover.remove();
         }, 2000)
     }, 1000)
 })
